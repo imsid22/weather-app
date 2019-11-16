@@ -126,11 +126,6 @@ export default class App extends Component {
   // }
   
 
-
-    
-    
-  
-
   render(){
     let closeModal = () => this.setState({showModal:false});
     return(
@@ -142,15 +137,15 @@ export default class App extends Component {
             {this.state.locationList.map(location => (
               <div key={location.woeid}>
                 <ButtonToolbar>
-              <Button className = "locationButton" onClick ={function(event){this.callFunc()}}>
-                {location.title}
-              </Button>
-              <WeatherModal 
-              show = {this.state.showModal}
-              onHide = {closeModal}
-            />
-              </ButtonToolbar>
-            </div>
+                  <Button className = "locationButton" onClick ={function(event){this.callFunc()}}>
+                    {location.title}
+                  </Button>
+                  <WeatherModal 
+                    show = {this.state.showModal}
+                    onHide = {closeModal}
+                  />
+                </ButtonToolbar>
+              </div>
             ))}
           </div>  
         <Weather/>
