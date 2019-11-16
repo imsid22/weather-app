@@ -11,13 +11,13 @@ import WeatherModal from './app_components/WeatherModal';
 //var Modal = require('react-bootstrap-modal');
 export default class App extends Component {
   
-  //constructor(props){
-    //super(props)
+  constructor(props){
+    super(props)
     //console.log("HIIIIIIIIIII")
-    //this.obj = new WeatherModal();
+    this.obj = new WeatherModal();
     
     //console.log(this.obj);
-  //}
+  }
   //constructor(){
    // super();
    // this.state = {};
@@ -32,8 +32,9 @@ export default class App extends Component {
     showModal: false
   }
   
-  callFunc = () => {
-    WeatherModal.getWeather();
+  callFunc = (locationID) => {
+    this.obj.getWeather(locationID);
+    this.setState({showModal: true})
   }
 
 
@@ -124,7 +125,7 @@ export default class App extends Component {
   //     </>
   //   );
   // }
-  
+
 
   render(){
     let closeModal = () => this.setState({showModal:false});
@@ -137,7 +138,7 @@ export default class App extends Component {
             {this.state.locationList.map(location => (
               <div key={location.woeid}>
                 <ButtonToolbar>
-                  <Button className = "locationButton" onClick ={function(event){this.callFunc()}}>
+                  <Button className = "locationButton" onClick ={() => this.callFunc(location.woeid)}>
                     {location.title}
                   </Button>
                   <WeatherModal 
