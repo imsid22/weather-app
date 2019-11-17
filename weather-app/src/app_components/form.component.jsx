@@ -12,9 +12,6 @@ const Form = props =>{
                 <div className="col-md-3 mt-md-0 text-md-left">
                     <button className="btn btn-warning">Search</button>
                 </div>
-                {/* <div className="col-md-3 mt-md-0 text-md-left">
-                    <button className="btn btn-warning">Reset</button>
-                </div> */}
             </div>
             </form>
         </div>
