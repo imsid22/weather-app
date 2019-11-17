@@ -60,8 +60,8 @@ class WeatherModal extends Component{
                   <div>Weather State : {this.dummyweatherState}</div>
                   <div>Minimum Temperature : {this.dummymin_temp}&deg;</div>
                   <div>Maximum Temperature : {this.dummymax_temp}&deg;</div>
-                  <div>Minimum Temperature : {this.dummywindSpeed} mph</div>
-                  <div>Maximum Temperature : {this.dummyhumidity} %</div>
+                  <div>Wind Speed : {this.dummywindSpeed} mph</div>
+                  <div>Humidity : {this.dummyhumidity} %</div>
                 </div>
               </Modal.Body>
               <Modal.Footer>
